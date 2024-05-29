@@ -17,12 +17,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button Crypto1 = findViewById(R.id.Crypto1);
+        Button Crypto2 = findViewById(R.id.Crypto2);
         Button Stegano = findViewById(R.id.Stegano);
         Crypto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, Crypto.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Crypto2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, Crypto2.class);
                 startActivity(intent);
 
             }
