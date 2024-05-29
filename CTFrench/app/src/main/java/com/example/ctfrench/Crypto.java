@@ -46,9 +46,6 @@ public class Crypto extends AppCompatActivity {
         return "";
     }
 
-    private Button showTextButton;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,15 +63,7 @@ public class Crypto extends AppCompatActivity {
                 String userinput = passwordinput.getText().toString();
                 String Md5_hash = md5(userinput);
 
-                /*if (passwordinput.getText().toString().decrypt("b74dec4f39d35b6a2e6c48e637c8aedb")){
-                    StringBuilder stringBuilder = new StringBuilder();
-                    stringBuilder.append("Noice :) CTFrench{");
-                    stringBuilder.append(flagOutput.getText().toString());
-                    stringBuilder.append("_is_good!}");
-                    flagOutput.setText(stringBuilder.toString());
-
-                }*/
-                if (Md5_hash.equals("69801a4ccce0e5179a027cce35f58ab2")) {
+                if (Md5_hash.equals(getString(R.string.hash_value))) {
                     StringBuilder stringBuilder = new StringBuilder();
                     stringBuilder.append("Noice :) CTFrench{");
                     stringBuilder.append(userinput);
@@ -94,17 +83,4 @@ public class Crypto extends AppCompatActivity {
             return insets;
         });
     }
-    /*public static String decrypt (byte[] cipherText, SecretKey key, byte[] IV) {
-        try {
-            Cipher cipher = Cipher.getInstance("AES");
-            SecretKeySpec keySpec = new SecretKeySpec(key.getEncoded(), "AES");
-            IvParameterSpec ivSpec = new IvParameterSpec(IV);
-            cipher.init(Cipher.DECRYPT_MODE, keySpec, ivSpec);
-            byte[] decryptedText = cipher.doFinal(cipherText);
-            return new String(decryptedText);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }*/
 }
