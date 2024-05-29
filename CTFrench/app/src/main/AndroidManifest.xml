@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CTFrench"
         tools:targetApi="31">
         <activity
+            android:name=".OSINT"
+            android:exported="false" />
+        <activity
             android:name=".Crypto2"
             android:exported="false" />
         <activity

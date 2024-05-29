@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Button Crypto1 = findViewById(R.id.Crypto1);
         Button Crypto2 = findViewById(R.id.Crypto2);
         Button Stegano = findViewById(R.id.Stegano);
+        Button Osint = findViewById(R.id.Osint);
         Crypto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +45,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, Stegano.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Osint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, OSINT.class);
                 startActivity(intent);
 
             }
