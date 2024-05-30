@@ -1,11 +1,11 @@
 package com.example.ctfrench;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         Button Crypto1 = findViewById(R.id.Crypto1);
         Button Crypto2 = findViewById(R.id.Crypto2);
         Button Stegano = findViewById(R.id.Stegano);
+        Button Binary = findViewById(R.id.Binary);
         Button Osint = findViewById(R.id.Osint);
         Button Web = findViewById(R.id.Web);
         Button Login = findViewById(R.id.Login);
@@ -47,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(MainActivity.this, Stegano.class);
+                startActivity(intent);
+
+            }
+        });
+
+        Binary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, Binary.class);
                 startActivity(intent);
 
             }
