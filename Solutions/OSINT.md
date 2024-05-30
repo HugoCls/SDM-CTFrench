@@ -15,4 +15,4 @@ For that, we need to find which french skiier has been 3 time world champion the
 We can notice that the picture is blurry and old so the best thing is to check the records of french skiing champion
 It is easy to find the person we are looking for:
 Emile Allais in Chamonix
-Flag: CTFrench{Emile_Allais_Chamonix}
+Flag: **CTFrench{Emile_Allais_Chamonix}**
