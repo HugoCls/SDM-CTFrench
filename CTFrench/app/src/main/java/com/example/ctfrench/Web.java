@@ -3,21 +3,26 @@ package com.example.ctfrench;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class OSINT extends AppCompatActivity {
+public class Web extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_osint);
+        setContentView(R.layout.activity_web);
+
+        WebView myWebView = findViewById(R.id.Webview);
+        myWebView.setWebViewClient(new WebViewClient()); // Ensures links open in the WebView
+        myWebView.loadUrl("https://exploit-mag.challenges.404ctf.fr/news/");
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -29,10 +34,12 @@ public class OSINT extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(OSINT.this, MainActivity.class);
+                Intent intent = new Intent(Web.this, MainActivity.class);
                 startActivity(intent);
 
             }
         });
     }
+
+
 }

@@ -14,9 +14,10 @@
         android:text="Here are some french specialties, bon appetit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <Button
         android:id="@+id/button"
@@ -41,6 +42,24 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.872"
         app:srcCompat="@drawable/frog" />
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="107dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="4dp"
+        android:background="#4A0909"
+        android:text="Back"
+        android:textColorLink="#670B0B"
+        app:layout_constraintBottom_toTopOf="@+id/Webview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#A81F1F" />
 
     <TextView
         android:id="@+id/editTextText2"
