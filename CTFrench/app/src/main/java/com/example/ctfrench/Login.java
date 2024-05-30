@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Web extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class Web extends AppCompatActivity {
 
         WebView myWebView = findViewById(R.id.Webview);
         myWebView.setWebViewClient(new WebViewClient()); // Ensures links open in the WebView
-        myWebView.loadUrl("http://79.137.38.217/CTFrench-Web-App/Exploit-Magazine/news/dataleak-CTFrench/");
+        myWebView.loadUrl("http://79.137.38.217:5001");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,7 +34,7 @@ public class Web extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Web.this, MainActivity.class);
+                Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
 
             }
