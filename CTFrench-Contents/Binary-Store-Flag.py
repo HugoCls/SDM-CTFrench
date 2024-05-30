@@ -10,7 +10,7 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
 
             flag_sentence = query_params['param'][0]
 
-            if 'jkf-ymwmvom-ul' in flag_sentence:
+            if 'you_deserve_it' in flag_sentence:
                 self.send_response(200)
                 self.send_header('Access-Control-Allow-Origin', 'http://79.137.38.217') 
                 self.send_header('Content-type', 'text/plain')
